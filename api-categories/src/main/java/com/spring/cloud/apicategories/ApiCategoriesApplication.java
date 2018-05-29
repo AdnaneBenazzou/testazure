@@ -1,6 +1,6 @@
-package com.spring.cloud.apiauthors;
+package com.spring.cloud.apicategories;
 
-import com.spring.cloud.apiauthors.pojo.Author;
+import com.spring.cloud.apicategories.pojo.Category;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Map;
@@ -15,25 +15,24 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @EnableEurekaClient
 @RestController
-public class ApiAuthorsApplication {
+public class ApiCategoriesApplication {
 
-	private static Map<Integer, Author> authorsMap = new HashMap<>();
+	private static Map<Integer,Category> categoriesMap = new HashMap<>();
 
 	public static void main(String[] args) {
-		authorsMap.put(1, new Author(1, "Tim", "Cain"));
-		authorsMap.put(2, new Author(2,"Leonard", "Boyarsky"));
-		authorsMap.put(3, new Author(3,"Jason", "Anderson"));
-		SpringApplication.run(ApiAuthorsApplication.class, args);
+		categoriesMap.put(1, new Category(1, "JeuxVideos", "Categorie des jeux videos"));
+		categoriesMap.put(2, new Category(2,"Informatique", "Informatique generale"));
+		SpringApplication.run(ApiCategoriesApplication.class, args);
 	}
 
 	@RequestMapping("/")
-	public Collection<Author> getAllNews() {
-		return authorsMap.values();
+	public Collection<Category> getAllCategories() {
+		return categoriesMap.values();
 	}
 
 	@RequestMapping(value = "/{id}", method = RequestMethod.GET)
-	public Author getAuthor(@PathVariable("id") int id) {
-		return authorsMap.get(id);
+	public Category getAuthor(@PathVariable("id") int id) {
+		return categoriesMap.get(id);
 	}
 
 }

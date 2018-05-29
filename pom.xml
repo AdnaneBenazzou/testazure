@@ -19,6 +19,7 @@
         <module>service-registry</module>
         <module>api-news</module>
         <module>api-authors</module>
+        <module>api-categories</module>
     </modules>
 
     <properties>
