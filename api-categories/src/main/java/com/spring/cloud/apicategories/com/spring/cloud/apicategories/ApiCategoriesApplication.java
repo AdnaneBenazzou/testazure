@@ -1,4 +1,4 @@
-package com.spring.cloud.apicategories;
+package com.spring.cloud.apicategories.com.spring.cloud.apicategories;
 
 import com.spring.cloud.apicategories.pojo.Category;
 import java.util.Collection;

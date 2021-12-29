@@ -20,6 +20,7 @@
         <module>api-news</module>
         <module>api-authors</module>
         <module>api-categories</module>
+        <!-- <module>TPSpringData</module>-->
     </modules>
 
     <properties>
